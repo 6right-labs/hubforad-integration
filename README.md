@@ -74,3 +74,12 @@ async function checkTask(telegramId: number, taskId: string) {\
     }
 }
 ```
+
+# Что нужно от вашего API
+## Метод для применения награды
+Что принмает запрос: 
+```
+telegramId - id игрока
+balance - бонус который получает игрок (можно словарь в виде строки)
+token - токен авторизации api-to-api
+```
