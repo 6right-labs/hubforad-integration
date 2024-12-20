@@ -1,5 +1,7 @@
 # Подключение API AdGrid
+
 ## Типы
+
 ```ts
 telegramId: number // id игрока который получает таски
 ```
@@ -18,6 +20,7 @@ type Task = {
 ```
 
 ## Получение списка тасок
+
 ```ts
 async function getTasks(telegramId: number) {
   try {
@@ -33,9 +36,11 @@ async function getTasks(telegramId: number) {
   }
 }
 ```
+
 Данная функция вернёт список из задач
 
 Вот пример выхода:
+
 ```json
 [
   {
@@ -54,6 +59,7 @@ async function getTasks(telegramId: number) {
 ```
 
 ## Запрос на проверку таски
+
 ```ts
 async function checkTask(telegramId: number, taskId: string) {\
     try {
@@ -76,10 +82,20 @@ async function checkTask(telegramId: number, taskId: string) {\
 ```
 
 # Что нужно от вашего API
-## Метод для применения награды
-Что принмает запрос: 
+
+## GET метод для применения награды
+
+Что принимает запрос через url параметры: 
 ```
 telegramId - id игрока
-balance - бонус который получает игрок (можно словарь в виде строки)
-token - токен авторизации api-to-api
 ```
+
+Пример ссылки
+
+`
+https://example.com:3000/admin/add-to-task-balance?telegramId=%s
+`
+
+`%s` здесь указывается в том месте куда нужно подставить id игрока
+
+Так же метод может принимать какие либо мета данные, их нужно указать в ссылке, т.к. `API AdGrid` меняет только `%s` 
