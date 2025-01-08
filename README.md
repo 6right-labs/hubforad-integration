@@ -32,6 +32,7 @@ type Task = {
   name: string;
   link: string;
   bonus: string;
+  icon_link: string;
 }
 ```
 
@@ -63,13 +64,15 @@ async function getTasks(telegramId: number) {
     "ID": "a2534ccc-83aa-4eda-b42e-7106491fdbac",
     "bonus": "99999",
     "link": "t.me",
-    "name": "Открой ТГ в браузере"
+    "name": "Открой ТГ в браузере",
+    "icon_link": "https://hubforad-test.printer-game.com/api/s3/81f47cf4-c0ce-44c1-8c25-d0c5e25b77e7.jpeg"
   },
   {
     "ID": "c294a5e2-02fa-4a4d-ab0a-d3228cd9528e",
     "bonus": "99999",
     "link": "http://google.com",
-    "name": "Открой гугл в браузере"
+    "name": "Открой гугл в браузере",
+    "icon_link": "https://hubforad-test.printer-game.com/api/s3/fea4f08a-5ccf-45b4-9d4f-3253e6b9c1a0.jpeg"
   }
 ]
 ```
