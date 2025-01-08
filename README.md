@@ -88,6 +88,7 @@ async function checkTask(telegramId: number, taskId: string) {\
             body: JSON.stringify({
                 player_id: telegramId,
                 task_id: taskId,
+                block_id: "bbd1eb06-8bcc-4d1a-b383-e242d9938808"
             }),
         });
         const res = await req.json();
@@ -99,6 +100,8 @@ async function checkTask(telegramId: number, taskId: string) {\
     }
 }
 ```
+
+bbd1eb06-8bcc-4d1a-b383-e242d9938808 - это id для действия, вам выдаст админ ([Hubforad](https://t.me/ray6right))
 
 # Что нужно от вашего API
 
