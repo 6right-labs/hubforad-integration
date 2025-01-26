@@ -82,7 +82,7 @@ Here's an example of output:
 ```ts
 async function checkTask(telegramId: number, taskId: string) {\
     try {
-        const req = await fetch(`https://hubforad-test.printer-game.com/tasks/complete`, {
+        const req = await fetch(`https://hubforad-test.printer-game.com/api/tasks/complete`, {
             method: "POST",
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify({
